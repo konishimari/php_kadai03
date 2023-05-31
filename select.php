@@ -45,7 +45,7 @@ $json = json_encode($values,JSON_UNESCAPED_UNICODE);
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-      <a class="navbar-brand" href="index.php">入力画面へ戻る　　　　　メディアアート一覧   </a>
+      <a class="navbar-brand" href="index.php">メディアアート一覧　　　　　入力画面へ戻る   </a>
       </div>
     </div>
   </nav>

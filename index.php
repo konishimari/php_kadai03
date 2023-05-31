@@ -12,7 +12,7 @@
 <header>
   <nav class="navbar navbar-default">
     <div class="container-fluid">
-    <div class="navbar-header"><a class="navbar-brand" href="read.php">メディアアートデータ/入力ページ</a></div>
+    <div class="navbar-header"><a class="navbar-brand" href="select.php">メディアアートデータ一覧へ</a></div>
     </div>
   </nav>
 </header>
@@ -22,7 +22,7 @@
 <form method="post" action="insert.php">
   <div class="jumbotron">
    <fieldset>
-    <legend>Media Art Index</legend>
+    <legend>Media Art Index 入力ページ</legend>
      <label>作家名：   <input type="varChar 64" name="name"></label><br>
      <label>国：      <input type="varChar 64" name="nationality"></label><br>
      <label>キーワード：<input type="varChar 30" name="keyword"></label><br>
