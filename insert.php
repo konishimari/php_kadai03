@@ -34,6 +34,6 @@ $status = $stmt->execute();
 if($status==false){   
   sql_error($stmt);//関数sql＿errorを実行
 }else{
-  redirect("index.php");   
+  redirect("select.php");   
 }
 ?>

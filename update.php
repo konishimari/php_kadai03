@@ -8,7 +8,7 @@
 //   bindValueにも「id」の項目を追加
 //4. header関数"Location"を「select.php」に変更
 //1. POSTデータ取得
-// var_dump($_POST);
+var_dump($_POST);
 $name   = $_POST["name"];
 $nationality  = $_POST["nationality"];
 $keyword = $_POST["keyword"];
