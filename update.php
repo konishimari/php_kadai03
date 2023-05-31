@@ -8,6 +8,7 @@
 //   bindValueにも「id」の項目を追加
 //4. header関数"Location"を「select.php」に変更
 //1. POSTデータ取得
+// var_dump($_POST);
 $name   = $_POST["name"];
 $nationality  = $_POST["nationality"];
 $keyword = $_POST["keyword"];
@@ -15,22 +16,22 @@ $title    = $_POST["title"];
 $year    = $_POST["year"]; 
 $commentary  = $_POST["commentary"]; 
 $url  = $_POST["url"]; 
-$id     = $_POST["id"];//追加されています
+$id     = $_POST["id"];
 
 //2. DB接続します
 include("funcs.php");
 
 //３．データ登録SQL作成
 $pdo = db_conn();
-$sql = "UPDATE gs_an_table SET name=:name,email=:email,age=:age,naiyou=:naiyou WHERE id=:id";
+$sql = "UPDATE gs_an_kadai02_table SET name=:name,nationality=:nationality,keyword=:keyword,title=:title,year=:year,commentary=:commentary,url=:url WHERE id=:id";
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':name',   $name,   PDO::PARAM_STR);  //Integer（数値の場合 PDO::PARAM_INT)
 $stmt->bindValue(':nationality',  $nationality,  PDO::PARAM_STR);  //Integer（数値の場合 PDO::PARAM_INT)
-$stmt->bindValue(':keyword',    $keyword,    PDO::PARAM_INT);  //Integer（数値の場合 PDO::PARAM_INT)
+$stmt->bindValue(':keyword',    $keyword,    PDO::PARAM_STR);  //Integer（数値の場合 PDO::PARAM_INT)
 $stmt->bindValue(':title', $title, PDO::PARAM_STR);  //Integer（数値の場合 PDO::PARAM_INT)
 $stmt->bindValue(':year',     $year,     PDO::PARAM_INT);
-$stmt->bindValue(':commentary',     $commentary,     PDO::PARAM_INT);
-$stmt->bindValue(':url',     $url,     PDO::PARAM_INT);
+$stmt->bindValue(':commentary',     $commentary,     PDO::PARAM_STR);
+$stmt->bindValue(':url',     $url,     PDO::PARAM_STR);
 $stmt->bindValue(':id',     $id,     PDO::PARAM_INT);
 
 $status = $stmt->execute(); //実行

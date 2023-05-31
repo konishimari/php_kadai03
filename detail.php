@@ -58,6 +58,7 @@ $v = $stmt->fetch();
   <div class="jumbotron">
    <fieldset>
    <legend>Media Art Index</legend>
+   
      <label>作家名：   <input type="varChar 64" name="name" value="<?=$v["name"]?>"></label><br>
      <label>国：      <input type="varChar 64" name="nationality" value="<?=$v["nationality"]?>"></label><br>
      <label>キーワード：<input type="varChar 30" name="keyword" value="<?=$v["keyword"]?>"></label><br>
@@ -66,6 +67,7 @@ $v = $stmt->fetch();
      <!-- textAreaの場合、valueにデータベースから取ってきた値をいれず、外に出しておく  -->
      <label>解説：     <textArea name="commentary" rows="10" cols="50" value="commentary"><?=$v["commentary"]?></textArea></label><br>
      <label>参照url：  <input type="text" name="url" value="<?=$v["url"]?>"></label><br>
+     <input type="hidden" name="id" value="<?=$v["id"]?>">
      <input type="submit" value="送信">
     </fieldset>
   </div>
